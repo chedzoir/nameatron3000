@@ -28,7 +28,15 @@ function ifier(val) {
   return val + validateEnding(val, "ifier")
 }
 
+function ificater(val) {
+  return val + validateEnding(val, "ificater")
+}
 
-const EndingAppenders = [ atron, anator, aniser, ifier ]
+function ster(val) {
+  return val + validateEnding(val, "ster")
+}
+
+
+const EndingAppenders = [ atron, anator, aniser, ifier, ificater, ster ]
 
 module.exports = { validateEnding, EndingAppenders};
