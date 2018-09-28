@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.app-header > h1 {
+  margin-bottom:0px;
+}
+
+h1 .title {
+  color: mediumorchid;
+  font-style: italic;
+}
+
+.app-header >  h4 {
+    font-weight: lighter;
+    font-size: .8em;
+    color: #888888;
+    font-style: italic;
+    margin-top:0px;
+}
+
+p {
+  font-size: .9em;
+}
+
+.entry input, .entry button {
+  margin: 0 10px 0 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+li {
+  padding: 5px;
+}
+
