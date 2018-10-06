@@ -8,7 +8,7 @@ class App extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { nameatronName : "", enteredName : "", showFaq: false}
+    this.state = { nameatronName : "", enteredName : "", showFaq: false, isAddVersion: false, lastVersion: ""}
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.openFAQ = this.openFAQ.bind(this)
@@ -31,14 +31,27 @@ class App extends Component {
               Enter the one word that best describes what we're about to name
             </p>
             <p className="entry">
-              <input type="text" onChange={this.handleChange} placeholder="Description"></input>
+              <input type="text" name="enteredName" onChange={this.handleChange} placeholder="Description"></input>
               <button>
               Name it
               </button>
             </p>
+            <p className="entry">
+              Add a version? :
+              <input type="checkbox" name="isAddVersion" onChange={this.handleChange} checked={this.state.isAddVersion}/>
+
+              { this.state.isAddVersion &&
+              (
+                  <span>
+                    Last version :
+                    <input type="text" name="lastVersion" onChange={this.handleChange} checked={this.state.lastVersion}/>
+                  </span>
+              )}
+            </p>
+
         </form>
 
-        <NameatronName nameatronName={this.state.nameatronName}/>
+        <NameatronName nameatronName={this.state.nameatronName} isAddVersion={this.state.isAddVersion} lastVersion={this.state.lastVersion}/>
 
         {this.state.showFaq && <Faq closeDialog={this.closeFAQ}/>}
         {this.state.showAbout && <About closeDialog={this.closeAbout}/>}
@@ -61,8 +74,10 @@ class App extends Component {
   }
 
   handleChange(e) {
-    this.setState({ enteredName : e.target.value})
+    var newValue = e.target.type === "checkbox" ? e.target.checked : e.target.value
+    this.setState({ [e.target.name] : newValue})
   }
+
 
   openFAQ(e) {
     e.preventDefault();
