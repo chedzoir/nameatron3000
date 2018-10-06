@@ -1,0 +1,16 @@
+div.about {
+  width: 400px;
+  text-align: left;
+  left: calc(50% - 205px);
+  top: 75px;
+  position: absolute;
+  border: 1px solid #cccccc;
+  font-size: .9em;
+  background-color: white;
+  padding: 8px 13px 4px 13px;
+}
+
+div.about > div.text {
+  text-align: justify;
+  padding-right: 13px;
+}
