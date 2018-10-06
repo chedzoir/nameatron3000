@@ -36,3 +36,33 @@ li {
   padding: 5px;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  padding: 5px 0 3px 0;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.divider {
+  font-style: normal;
+  padding: 0 4px 0 4px;
+}
+
+.footer a , .footer a:visited, .footer a:hover, .footer a:active{
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+}
+
+.close {
+  position: absolute;
+  right:0px;
+  top:0px;
+  padding: 2px 4px;
+  background-color: #cccccc;
+  color: #999999;
+  cursor: pointer;
+}

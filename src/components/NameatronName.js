@@ -8,11 +8,11 @@ class NameatronName extends Component {
         var nameToUse = this.props.nameatronName
         if (nameToUse.length) {
             return (
-                <div>
-                  <p>Chose from the following names</p>
+                <div className="nameatronResults">
+                  <p>Choose your name from the following options</p>
                   <ul>
                   {EndingAppenders.map(ending => (
-                            <li>{ending(nameToUse)}</li>
+                            <li key={ending(nameToUse)}>{ending(nameToUse)}</li>
                           ))}
                   </ul>
                 </div>

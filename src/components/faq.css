@@ -1,0 +1,26 @@
+div.faq {
+  width: 500px;
+  text-align: left;
+  left: calc(50% - 255px);
+  position: absolute;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  font-size: .9em;
+}
+
+.qanda:first-child p.question {
+  margin-top: 0;
+}
+
+div.faq p.answer {
+  margin-top: 0px;
+}
+
+div.faq p.question {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.qanda:last-child p.answer{
+  margin-bottom: 0;
+}
